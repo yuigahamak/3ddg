@@ -760,3 +760,11 @@ li{
 #confirm button[confirm="cancel"]{
 	left: 160px;
 }
+#footer {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -100px;
+	width: 200px;
+	text-align: center;
+}
