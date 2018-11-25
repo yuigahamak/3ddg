@@ -514,7 +514,7 @@ $(function(){
 		});*/
 	});
 	
-	$('#help').click(function(){
+	/*$('#help').click(function(){
 		url = 'http://mixi.jp/navigate_to_external_site_from_appli.pl?app_id=' + api.app_id + '&url=http%3A%2F%2F3ddg.net%2Fhelp%2F&site_type=general&owner_uid=' + viewer.user;
 		window.open(url,'new');
 	});
@@ -522,7 +522,7 @@ $(function(){
 	$('#help-editor span').click(function(){
 		url = 'http://mixi.jp/navigate_to_external_site_from_appli.pl?app_id=' + api.app_id + '&url=http%3A%2F%2F3ddg.net%2Fhelp%2F%234&site_type=general&owner_uid=' + viewer.user;
 		window.open(url,'new');
-	});
+	});*/
 
 	$('#myinfo').click(function(){
 		var level = new Level(viewer.exp);
