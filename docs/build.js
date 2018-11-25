@@ -172,7 +172,7 @@ Build.prototype.publics = function(page){
 	var list = $('#public-list .list');
 	$(list).attr('page',page).empty();
 	for(var i = page * this.pageNum; i < length && i < (page + 1) * this.pageNum; i++){
-		row = publics[i];
+		row = publics[length - i - 1];
 		var name = document.createElement('div');		
 		$(name).addClass('map-name').html(this.escape(row.name));
 		//var size = document.createElement('div');		
