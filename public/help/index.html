@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>3Dダンジョン迷路 ヘルプ</title>
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<link rel="stylesheet" href="help.css" type="text/css" media="screen" />
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-18605283-4']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+<body>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129765410-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-129765410-1');
+</script>
+
+	<h1 id="logo">
+		<img src="img/help.png" height="60px" alt="3Dダンジョン迷路 ヘルプ"/>
+	</h1>
+	<hr />
+	<div>
+		<h2>目次</h2>
+		<ul>
+			<li><a href="#1">ゲームの目的</a></li>
+			<li><a href="#2">ゲームの進め方</a></li>
+			<li>
+				<a href="#3">迷路の解き方</a>
+				<ul>
+					<li><a href="#3-1">操作方法</a></li>
+					<li><a href="#3-2">ゴースト</a></li>
+					<li><a href="#3-3">扉の開閉</a></li>
+					<li><a href="#3-4">鍵</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#4">マップエディタ</a>
+				<ul>
+					<li><a href="#4-1">新しく迷路をつくる</a></li>
+					<li><a href="#4-2">迷路の保存</a></li>
+					<li><a href="#4-3">ステータス</a></li>
+					<li><a href="#4-4">壁、扉の配置</a></li>
+					<li><a href="#4-5">シンボルの配置</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#5">動作環境</a>
+				<ul>
+					<li><a href="#5-1">Internet Explorerでの動作について</a></li>
+				</ul>
+			</li>
+		</ul>
+		<img id="titei" src="img/sc.gif" alt="titei" />
+	</div>
+	<hr />
+	<div id="1">
+		<h2>ゲームの目的</h2>
+		<p>疑似3Dで表示されたダンジョン風迷路を解くゲームです。最初は簡単な迷路からスタートし、迷路を解く事でレベルが上がっていき、より難しい迷路に挑戦できます。すべての迷路をクリアして、あるアイテムを手に入れると、ダンジョンキングの称号が手に入ります。</p>
+	</div>
+	<hr />
+	<div id="2">
+		<h2>ゲームの進め方</h2>
+		<img class="fr" src="img/help2-1.gif" alt="clear" />
+		<img class="fr" src="img/help2-2.gif" alt="failed" />
+		<img class="fr" src="img/help2-3.gif" alt="none" />
+		<p>迷路を解くと経験値を獲得し、レベルが上がっていきます。レベルが上がると、挑戦できる迷路が増えていきます。一度クリアした迷路をもう一度クリアしても経験値は入りません。</p>
+		<p>クリア済みの迷路はCLEARと表示されます。クリアできなかった迷路にはFAILEDと表示されます。まだ挑戦していない迷路には何も表示されません。</p>
+	</div>
+	<hr />
+	<div id="3">
+		<h2>迷路の解き方</h2>
+		<p>疑似3Dで表示された迷路の中で、ゴール地点を探します。ゴールは梯子で表示されます。ゴールに到達するとクリアです。</p>
+		<p>迷路の中には扉や鍵付きの扉、鍵、ゴーストなどが登場し、レベルが上がるほど複雑になり、難しくなっていきます。</p>
+		<hr />
+		<div id="3-1">
+			<h3>操作方法</h3>
+			<p>キーボードまたはマウス等のポインティングデバイスで操作できます。</p>
+			<hr />
+			<div id="3-1-1">
+				<h3>キーボードでの操作</h3>
+				<p>カーソルーキーで移動します。↑キーで前進、←キー、→キーで向きを変えます。</p>
+				<p>スペースキーで扉の開閉、鍵を外す、1回待機などの行動をします。</p>
+			</div>
+			<hr />
+			<div id="3-1-2">
+				<h4>マウスでの操作</h4>
+				<img class="fr" src="img/help3-2.jpg" alt="cursor" />
+				<p>マウスで操作する場合は画面に表示されている矢印をクリックします。</p>
+				<p>矢印がキーボードのカーソルキーに対応しています。</p>
+				<p>中央の四角形がキーボードのスペースキーに対応しています。</p>
+				<!--<img class="fr" src="img/help3-1.jpg" alt="cursor" />-->
+			</div>
+			<hr />
+			<div id="3-1-3">
+				<h4>途中でやめる</h4>
+				<p>EXITをクリックして、迷路の途中でやめることが出来ます。</p>
+				<p>途中でやめた後、もう一度挑戦する場合、スタート地点からやり直しになります。</p>
+			</div>
+		</div>
+		<hr />
+		<div id="3-2">
+			<h3>ゴースト</h3>
+			<p>迷路の中にはゴーストが登場します。あなたが1マス移動する毎に、ゴーストも1マス移動します。扉の開閉や鍵を外す動作でも、ゴーストが移動します。ゴーストとぶつかると、スタート地点からやり直しになります。やり直しは何回でも出来ます。</p>
+		</div>
+		<hr />
+		<div id="3-3">
+			<h3>扉</h3>
+			<p>扉の直前で扉の方を向いてスペースキーを押すと扉を開けます。開いた扉の前でスペースキーを押すと扉を閉じます。扉の開閉は何回でもできます。</p>
+		</div>
+		<hr />
+		<div id="3-4">
+			<h3>鍵</h3>
+			<p>迷路の中には鍵のかかった扉が存在します。鍵は迷路の中に落ちています。</p>
+			<p>鍵を外すには、鍵のかかった扉の前でスペースキーを押します。鍵を外すと普通の扉になります。もう一度スペースキーを押して扉を開けます。一度鍵を外した後は、何回でも開閉できます。</p>
+			<img src="img/help3-3.jpg" alt="key" />
+			<img src="img/help3-4.jpg" alt="lock" />
+		</div>
+	</div>
+	<hr />
+	<div id="4">
+		<h2>マップエディタ</h2>
+		<p>レベルが上がると自分の迷路が作成出来るようになります。最初は小さな迷路しか作れませんが、レベルが高くなると大きなサイズの迷路が作れるようになり、配置できる鍵やゴーストの数が増えます。</p>
+		<p>作成した迷路は友人同士で挑戦できます。</p>
+		<hr />
+		<div id="4-1">
+			<h3>新しく迷路をつくる</h3>
+			<p>迷路を作成するにはメニューで 迷路をつくる > 新しく迷路をつくる と選択します。Untitledという迷路が追加されるので、クリックすると編集画面になります。 </p>
+			<p>迷路の大きさは、作成したときのレベルで自動で決まります。レベルが高いほど大きい迷路になります。</p>
+		</div>
+		<hr />
+		<div id="4-2">
+			<h3>迷路の保存</h3>
+			<p>「マップ保存」をクリックすると、編集した内容を保存します。自分で挑戦する前に保存してください。保存しないで挑戦したり、他の画面に移動した場合、編集内容は失われてしまいます。</p>
+		</div>
+		<hr />
+		<div id="4-3">
+			<h3>ステータス</h3>
+			<p>作成した迷路は自分で挑戦してクリアすると、ステータスが作成中から公開中に変わります。公開中の迷路は、友人に挑戦してもらうことが出来ます。</p>
+			<p>公開中の迷路を更新すると、作成中に変わり、友人が挑戦できなくなります。</p>
+		</div>
+		<hr />
+		<div id="4-4">
+			<h3>壁、扉の配置</h3>
+			<p>マップの中の、四角い点と点の間をクリックすると、壁や扉を配置できます。クリックする度に色が変わります。</p>
+			<table border="1">
+				<tr><td>薄い灰色</td><td>壁</td></tr>
+				<tr><td>濃い灰色</td><td>開いた扉</td></tr>
+				<tr><td>オレンジ</td><td>閉じた扉</td></tr>
+				<tr><td>赤</td><td>鍵のかかった扉<br /></td></tr>
+			</table>
+			<img src="img/help4-3.png" alt="wall" />
+			<p>鍵のかかった扉は、配置してある鍵の数しか配置できません。鍵のかかった扉を配置した後、別の場所に変更する場合は、既に配置してある鍵のかかった扉を削除してから行います。</p>
+		</div>
+		<hr />
+		<div id="4-5">
+			<h3>シンボルの配置</h3>
+			<p>ゴーストや鍵などをシンボルと呼びます。シンボルを配置するには、作成中のマップのマスの中に、配置したいシンボルをドラッグします。</p>
+			<p>配置してあるシンボルを削除するには、削除したいシンボルを、シンボルが元あった四角形の枠の中にドラッグして戻します。</p>
+			<img src="img/help4-2.gif" alt="symbols" />
+			<hr />
+			<div id="4-5-1">
+				<h4>スタート地点</h4>
+				<img class="fr" src="img/help4-4.png" alt="start" />
+				<p>スタート地点は、必ず配置する必要があります。</p>
+				<p>配置した後、クリックすると、スタート時のプレーヤーの向きを変更できます。</p>
+				<p>配置した後、ダブルクリックすると、スタート時に表示されるメッセージを設定できます。</p>
+			</div>
+			<hr />
+			<div id="4-5-2">
+				<h4>ゴール地点</h4>
+				<p>ゴール地点は、必ず配置する必要があります。</p>
+				<p>配置した後、ダブルクリックすると、ゴール時に表示されるメッセージを設定できます。</p>
+			</div>
+			<hr />
+			<div id="4-5-3">
+				<h4>ゴースト</h4>
+				<p>レベルが上がると配置できるゴーストの数が増えます。</p>
+				<p>配置してあるゴーストをクリックすると、スタート時のゴーストの向きを変更できます。</p>
+			</div>
+			<hr />
+			<div id="4-5-4">
+				<h4>鍵、逃げる鍵</h4>
+				<p>レベルが上がると鍵を配置できるようになります。鍵を配置すると鍵のかかった扉を配置できます。</p>
+			</div>
+			<hr />
+			<div id="4-5-5">
+				<h4>メッセージ</h4>
+				<p>ポップアップ表示されるメッセージを配置できます。メッセージは複数個、配置できます。レベルがあがると配置できるメッセージの数が増えます。</p>
+				<p>配置してあるメッセージをダブルクリックすると、メッセージの内容を編集できます。</p>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div id="5">
+		<h2>動作環境</h2>
+		<p>一般的な家庭用PCとブラウザで動作します。特別なソフト、プラグインは必要ありません。（Internet Explolerでの動作にはSilverlightのインストールが必要です。）</p>
+		<p>下記環境で動作を確認しています。OS、ブラウザは最新のバージョンを推奨します。</p>
+		<ul>
+			<li>OS: Windows XP、Windows 7、Mac OS X</li>
+			<li>ブラウザ: Internet Explorer 8、Internet Explorer 9、Firefox、Google Chrome、Safari</li>
+		</ul>
+		<p>Internet Explorer 6、Operaには対応していません。</p>
+		<hr />
+		<div id="5-1">
+			<h3>Internet Explorerでの動作について</h3>
+			<p>Internet Explolerでの動作にはSilverlightのインストールが必要です。Silverlightはマイクロソフトの開発しているプラグインです。マイクロソフトのサイトで無料で手に入ります。</p>
+			<p>
+				<a href="http://www.microsoft.com/ja-jp/silverlight/download.aspx">Silverlightのダウンロード</a>				
+			</p>
+		</div>
+		<hr />
+		<p>※上記対応OS、ブラウザでも動作の保証をするものではありません。</p>
+	</div>
+	<hr />
+	<div id="footer">&copy; 2012 Yuigahamak</div>
+</body>
+</html>
